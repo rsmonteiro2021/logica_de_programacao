@@ -1,0 +1,38 @@
+Problema "validacao_de_nota" (adaptado de URI 1117)
+Faça um Programa que leia as notas referentes às duas avaliações de um aluno. Calcule e imprima
+média semestral. Faça com que o algoritmo só aceite notas válidas (uma nota válida deve pertencer
+ao intervalo [0, 10]. Cada nota deve ser validada separadamente.
+
+Algoritmo "validacao_de_nota"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Faça um programa que leia as notas referentes às duas avaliações de um aluno. Calcule e imprima a
+//média semestral. Faça com que o algoritmo só aceite notas válidas (uma nota válida deve pertencer ao
+//intervalo [0,10]). Cada nota deve ser validada separadamente.
+// Autor(a)    : Roberto dos Santos Monteiro
+// Data atual  : 13/11/2022
+Var
+// Seção de Declarações das variáveis 
+
+    nota, soma, media, acumulador : real
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+    acumulador <- 1
+    soma <- 0
+
+    enquanto acumulador <= 2 faca
+        escreval("Digite a nota")
+        leia(nota)
+        se (nota < 0) ou (nota > 10) entao
+            escreva("Digite uma nota válida!")
+        senao entao
+            acumulador <- acumulador + 1
+            soma <- soma + nota
+        fimse
+    fimenquanto
+    
+    media <- soma/2
+    escreval("A média das notas será:", media)
+    
