@@ -1,0 +1,37 @@
+Problema "media_idades" 
+Faça um programa para ler um número indeterminado de dados, contendo cada um, a idade de um 
+indivíduo. O último dado, que não entrará nos cálculos, contém um valor de idade negativa. Calcular 
+e imprimir a idade média deste grupo de indivíduos. Se for entrado um valor negativo na primeira vez, 
+mostrar a mensagem "IMPOSSIVEL CALCULAR".
+
+Algoritmo "média das idades"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : media_idades
+// Autor(a)    : Roberto dos Santos Monteiro
+// Data atual  : 02/10/2022
+Var
+// Seção de Declarações das variáveis 
+
+    idade, novaidade, media, contador, soma : real
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+    idade <- 0
+    contador <- 0
+    enquanto idade >= 0 faca
+        escreval("Digite as idades:")
+            leia(idade)
+            se idade >= 0 entao
+                contador <- contador + 1
+                soma <- idade + idade
+    fimenquanto
+    media <- soma/contador
+    escreval("MEDIA: ", media)
+            senao
+                escreval("IMPOSSÍVEL CALCULAR")
+            fimse
+
+
+Fimalgoritmo
