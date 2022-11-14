@@ -20,28 +20,33 @@ Inicio
     a <- 0
     g <- 0
     d <- 0
-    
+
     enquanto (opcao < 1) ou (opcao > 4) faca
         escreval("Digite uma opção válida (1: álcoo; 2: gasolina; 3: diesel ou 4 para encerrar):")
         leia(opcao)
     fimenquanto
 
-    enquanto (opcao < 4) e (opcao >= 1) faca
-        escolha opcao
-        caso 1
+    enquanto opcao <= 3 faca
+        se opcao = 1 entao
             a <- a + 1
-        caso 2
-            g <- g + 1
-        caso 3
-            d <- d + 1
-        fimescolha
-        escreval("Digite sua opção de combustível (1: álcoo; 2: gasolina; 3: diesel ou 4 para encerrar):")
+        senao faca
+            se opcao = 2 entao
+                g <- g + 1
+            senao opcao = 3 entao
+                d <- d + 1
+            fimse
+        fimse
+        escreval("Digite uma opção válida (1: álcoo; 2: gasolina; 3: diesel ou 4 para encerrar):")
         leia(opcao)
     fimenquanto
     
-    escreval("Muito Obrigado!")
+    se opcao = 4 entao
+        escreval("Muito Obrigado!")
+    fimse
+
     escreval("Álcool: ", a)
     escreval("Gasolina: ", g)
     escreval("Diesel: ", d)
+
 
 Fimalgoritmo
