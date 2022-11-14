@@ -1,0 +1,52 @@
+Problema "combustivel" (adaptado de URI 1134)
+Um posto de combustíveis deseja determinar qual de seus produtos tem a preferência de seus clientes. Escreva um algoritmo para ler o tipo de combustível abastecido (codificado da seguinte forma: 1.Álcool 2.Gasolina 3.Diesel 4.Fim). Caso o usuário informe um código inválido (fora da faixa de 1 a 4) deve ser solicitado um novo código (até que seja válido). O programa será encerrado quando o código informado for o número 4, devendo então mostrar a mensagem "MUITO OBRIGADO", bem como as quantidades de cada combustível.
+
+Algoritmo "combustível"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : combustivel
+// Autor(a)    : Roberto dos Santos Monteiro
+// Data atual  : 13/11/2022
+Var
+// Seção de Declarações das variáveis 
+
+    opcao, a, g, d : inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+    escreval("Digite sua opção de combustível (1: álcoo; 2: gasolina; 3: diesel ou 4 para encerrar):")
+    leia(opcao)
+    a <- 0
+    g <- 0
+    d <- 0
+    
+    enquanto (opcao < 1) ou (opcao > 4) faca
+        escreval("Digite uma opção válida (1: álcoo; 2: gasolina; 3: diesel ou 4 para encerrar):")
+        leia(opcao)
+    fimenquanto
+
+    enquanto opcao <= 4 faca
+        se opcao = 1 entao
+            a <- a + 1
+            escreval("Digite sua opção de combustível (1: álcoo; 2: gasolina; 3: diesel ou 4 para encerrar):")
+            leia(opcao)
+            se opcao = 2 entao
+                g <- g + 1
+                escreval("Digite sua opção de combustível (1: álcoo; 2: gasolina; 3: diesel ou 4 para encerrar):")
+                leia(opcao)
+            senao opcao = 3 entao
+                d <- d + 1
+                escreval("Digite sua opção de combustível (1: álcoo; 2: gasolina; 3: diesel ou 4 para encerrar):")
+                leia(opcao)
+            fimse
+        senao opcao = 4 entao
+            escreval("Muito Obrigado!")
+        fimse
+    fimenquanto
+    
+    escreval("Álcool: ", a)
+    escreval("Gasolina: ", g)
+    escreval("Diesel: ", d)
+
+Fimalgoritmo
