@@ -26,25 +26,20 @@ Inicio
         leia(opcao)
     fimenquanto
 
-    enquanto opcao <= 4 faca
-        se opcao = 1 entao
+    enquanto (opcao < 4) e (opcao >= 1) faca
+        escolha opcao
+        caso 1
             a <- a + 1
-            escreval("Digite sua opção de combustível (1: álcoo; 2: gasolina; 3: diesel ou 4 para encerrar):")
-            leia(opcao)
-            se opcao = 2 entao
-                g <- g + 1
-                escreval("Digite sua opção de combustível (1: álcoo; 2: gasolina; 3: diesel ou 4 para encerrar):")
-                leia(opcao)
-            senao opcao = 3 entao
-                d <- d + 1
-                escreval("Digite sua opção de combustível (1: álcoo; 2: gasolina; 3: diesel ou 4 para encerrar):")
-                leia(opcao)
-            fimse
-        senao opcao = 4 entao
-            escreval("Muito Obrigado!")
-        fimse
+        caso 2
+            g <- g + 1
+        caso 3
+            d <- d + 1
+        fimescolha
+        escreval("Digite sua opção de combustível (1: álcoo; 2: gasolina; 3: diesel ou 4 para encerrar):")
+        leia(opcao)
     fimenquanto
     
+    escreval("Muito Obrigado!")
     escreval("Álcool: ", a)
     escreval("Gasolina: ", g)
     escreval("Diesel: ", d)
