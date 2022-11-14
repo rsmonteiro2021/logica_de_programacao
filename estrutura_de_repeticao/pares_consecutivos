@@ -1,0 +1,42 @@
+Algoritmo "pares_consecutivos"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : O programa deve ler um valor inteiro X indefinidas vezes. (O programa irá parar quando o valor de X
+//for igual a 0). Para cada X lido, imprima a soma dos 5 pares consecutivos a partir de X, inclusive o X
+//, se for par. Se o valor de entrada for 4, por exemplo, a saída deve ser 40, que é o resultado da operação:
+//4+6+8+10+12, enquanto que se o valor de entrada for 11, por exempo, a saída deve ser 80, que é a
+//soma de 12+14+16+18+20.
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 14/11/2022
+Var
+// Seção de Declarações das variáveis 
+
+    x, soma, n : inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+    escreval("Digite um número inteiro qualquer:")
+    leia(x)
+    n <- 1
+    
+    se x % 2 = 0 entao
+        soma <- x
+        enquanto n <= 4 faca
+            n <- n + 1
+            x <- x + 2
+            soma <- x + soma
+        fimenquanto
+    senao x % 2 <> 0 entao
+        x <- x + 1
+        soma <- x
+        enquanto n <= 4 faca
+            n <- n + 1
+            x <- x + 2
+            soma <- x + soma
+        fimenquanto
+    fimse
+
+    escreval("Soma = ", soma)
+
+Fimalgoritmo
