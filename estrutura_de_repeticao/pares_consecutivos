@@ -1,42 +1,51 @@
 Algoritmo "pares_consecutivos"
 // Disciplina   : [Linguagem e Lógica de Programação]
 // Professor   : Antonio Carlos Nicolodi 
-// Descrição   : O programa deve ler um valor inteiro X indefinidas vezes. (O programa irá parar quando o valor de X
-//for igual a 0). Para cada X lido, imprima a soma dos 5 pares consecutivos a partir de X, inclusive o X
-//, se for par. Se o valor de entrada for 4, por exemplo, a saída deve ser 40, que é o resultado da operação:
-//4+6+8+10+12, enquanto que se o valor de entrada for 11, por exempo, a saída deve ser 80, que é a
-//soma de 12+14+16+18+20.
-// Autor(a)    : Nome do(a) aluno(a)
-// Data atual  : 14/11/2022
+// Descrição   :O programa deve ler um valor inteiro X idefinidas vezes.
+// O programa irá parar quando o valor de X for igual a 0. Para cada X
+// lido, imprima a soma dos cinco 5 pares consecutivos a partir de X,
+// inclusive o X, se for par. Se o valor de entrada for 4, por exemplo,
+// a saída deverá ser 40, que é o resultado da operação: 4+6+8+10+12,
+// enquanto se o valor de entrada for 11, por exemplo, a saída deve ser
+// 80, que é a soma de 12+14+16+18+20.
+// Autor(a)    : Roberto dos Santos Monteiro
+// Data atual  : 27/11/2022
 Var
 // Seção de Declarações das variáveis 
 
-    x, soma, n : inteiro
+    x, n, soma : inteiro
 
 Inicio
-// Seção de Comandos, procedimento, funções, operadores, etc... 
+// Seção de Comandos, procedimento, funções, operadores, etc...
 
-    escreval("Digite um número inteiro qualquer:")
+    escreval("Digite um número inteiro:" )
     leia(x)
     n <- 1
-    
-    se x % 2 = 0 entao
-        soma <- x
-        enquanto n <= 4 faca
-            n <- n + 1
-            x <- x + 2
-            soma <- x + soma
-        fimenquanto
-    senao x % 2 <> 0 entao
+    se x % 2 <> 0 entao
         x <- x + 1
         soma <- x
-        enquanto n <= 4 faca
-            n <- n + 1
-            x <- x + 2
-            soma <- x + soma
-        fimenquanto
+    senao
+        x <- x
+        soma <- x
     fimse
-
-    escreval("Soma = ", soma)
+        
+    enquanto x <> 0 faca
+        enquanto n < 5 faca
+            x <- x + 2
+            soma <- soma + x
+            n <- n + 1
+        fimenquanto
+        escreval("Soma: ", soma)
+        escreval("Digite um número inteiro:" )
+        leia(x)
+        n <- 1
+        se x % 2 <> 0 entao
+            x <- x + 1
+            soma <- x
+        senao
+            x <- x
+            soma <- x
+        fimse
+    fimenquanto
 
 Fimalgoritmo
