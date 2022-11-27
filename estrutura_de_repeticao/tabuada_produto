@@ -1,0 +1,27 @@
+Algoritmo "tabuada"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Ler um número inteiro N, daí mostrar na tela a tabuada
+// de N para 1 a 10, conforme exemplo.
+// Autor(a)    : Roberto dos Santos Monteiro
+// Data atual  : 27/11/2022
+Var
+// Seção de Declarações das variáveis
+
+    N, x, produto : inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+    escreval("Digite um número inteiro: ")
+    leia(N)
+    x <- 0
+    produto <- N * x
+    
+    para x de 0 ate 9 faca
+        x <- x + 1
+        produto <- N * x
+        escreval(N, " x ", x, " = ", produto)
+    fimpara
+
+Fimalgoritmo
