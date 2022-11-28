@@ -8,7 +8,7 @@ Algoritmo "sequencia_impares"
 Var
 // Seção de Declarações das variáveis 
 
-    numero, y, x, n : inteiro
+    numero, x, n : inteiro
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 
@@ -18,13 +18,7 @@ Inicio
 
     x <- 1
 
-    se numero % 2 <> 0 entao
-        y <- numero
-    senao
-        y <- numero - 1
-    fimse
-
-    para n de 1 ate y faca
+    para n de 1 ate numero faca
         enquanto x <= numero faca
             escreva(x)
             x <- x + 2
