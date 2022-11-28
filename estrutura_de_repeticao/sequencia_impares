@@ -1,0 +1,34 @@
+Algoritmo "sequencia_impares"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Leia um valor inteiro X. Em seguida mostre os ímpares
+// de 1 até X, um valor por linha, inclusive o X,se for o caso.
+// Autor(a)    : Roberto dos Santos Monteiro
+// Data atual  : 27/11/2022
+Var
+// Seção de Declarações das variáveis 
+
+    numero, y, x, n : inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+    escreval("Digite um número inteiro qualquer: ")
+    leia(numero)
+
+    x <- 1
+
+    se numero % 2 <> 0 entao
+        y <- numero
+    senao
+        y <- numero - 1
+    fimse
+
+    para n de 1 ate y faca
+        enquanto x <= numero faca
+            escreva(x)
+            x <- x + 2
+        fimenquanto
+    fimpara
+
+Fimalgoritmo
