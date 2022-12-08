@@ -1,0 +1,39 @@
+Algoritmo "dentro_fora"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Leia um valor inteiro N. Este valor será a quantidade de valores
+// inteiros X que serão lidos em seguida.
+// Mostre quantos destes valores X estão dentro do intervalo [10,20] e quantos
+// estão fora do intervalo
+// Autor(a)    : Roberto dos Santos Monteiro
+// Data atual  : 07/12/2022
+Var
+// Seção de Declarações das variáveis 
+
+    n, x, i, fora, dentro : inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+
+    escreval("Quanto números você irá digitar?")
+    leia(n)
+    x <- 0
+    fora <- 0
+    dentro <- 0
+    
+    para i de 1 ate n faca
+        escreval("Digite um número inteiro: ")
+        leia(i)
+        x <- x + 1
+        se (i >= 10) e (i <= 20) entao
+            dentro <- dentro + 1
+        senao
+            fora <- fora + 1
+        fimse
+    fimpara
+    
+    escreval("Fora: ", fora)
+    escreval("Dentro: ", dentro)
+
+Fimalgoritmo
