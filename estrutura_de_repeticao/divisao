@@ -1,0 +1,37 @@
+Algoritmo "divisao"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Escreva um algoritmo que leia dois números e imprima o
+// resultado da divisão do primeiro pelo segundo. Caso não for possível,
+// mostre a mensagem “DIVISAO IMPOSSIVEL”.
+// Autor(a)    : Roberto dos Santos Monteiro
+// Data atual  : 28/12/2022
+Var
+// Seção de Declarações das variáveis 
+
+    a, b, d : real
+    x, n : inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+    escreval("Quantos casos você deseja digitar?")
+    leia(n)
+    x <- 1
+    
+    enquanto x <= n faca
+        escreval("entre com o numerador:")
+        leia(a)
+        escreval("entre com o denominador:")
+        leia(b)
+        
+        se b <> 0 entao
+            d <- a/b
+            escreval("Divisão = ", d)
+        senao
+            escreval("ERROR! DIVISÃO IMPOSSÍVEL!")
+        fimse
+        x <- x + 1
+    fimenquanto
+
+Fimalgoritmo
