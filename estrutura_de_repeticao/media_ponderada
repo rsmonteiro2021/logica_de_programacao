@@ -1,0 +1,41 @@
+Algoritmo "media_ponderada"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Leia um valor inteiro N, que representa o número de casos de
+// teste que vem a seguir. Cada caso de teste consiste de 3 valores reais, para
+// os quais você deverá calcular e mostrar a média ponderada, sendo
+// que o primeiro valor tem peso 2, o segundo valor tem peso 3 e o terceiro valor
+// tem peso 5. Vale lembrar que a média ponderada é a soma de todos os valores
+// multiplicados pelo seu respectivo peso, dividida pela soma dos pesos.
+// Autor(a)    : Roberto dos Santos Monteiro
+// Data atual  : 08/12/2022
+Var
+// Seção de Declarações das variáveis 
+
+   n, x : inteiro
+    a, b, c, media : real
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+
+    escreval("Quantos casos você irá testar? ")
+    leia(n)
+    x <- 1
+    
+    enquanto x <= n faca
+        escreval("Digite três números: ")
+        leia(a)
+        leia(b)
+        leia(c)
+
+        media <- ((a * 2) + (b * 3) + (c * 5))/(2 + 3 + 5)
+
+        escreval("Média = ", media)
+        
+        x <- x + 1
+    fimenquanto
+
+
+
+Fimalgoritmo
