@@ -1,0 +1,26 @@
+Algoritmo "fatorial"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Fazer um programa para ler um número natural N
+// valor máximo: 15), e depois calcular e mostrar o fatorial de N.
+// Autor(a)    : Roberto dos Santos Monteiro
+// Data atual  : 28/12/2022
+Var
+// Seção de Declarações das variáveis 
+
+    f, i, n, fatorial: inteiro
+
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+    escreval("Digite o valor de N:")
+    leia(n)
+    fatorial <- 1
+    
+    para i de 1 ate n faca
+       fatorial <- fatorial * i
+    fimpara
+    escreval("Fatorial de ", n, " = ", fatorial)
+
+Fimalgoritmo
