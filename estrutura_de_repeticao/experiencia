@@ -1,0 +1,65 @@
+Algoritmo "experiências"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : cria um relatório de experiêcias realizadas com os totais
+// de cobaias utilizadas e seus respectivos percentuais
+// Autor(a)    : Roberto dos Santos Monteiro
+// Data atual  : 29/12/2022
+Var
+// Seção de Declarações das variáveis 
+
+    cobaia : caractere
+    t, i, R, S, C, testes : inteiro
+    pc, pr, ps : real
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+    escreval("Quantos casos de testes serão digitados? ")
+    leia(testes)
+    R <- 0
+    S <- 0
+    C <- 0
+    t <- 0
+    
+    para i de 1 ate testes faca
+
+        escreval("Quantidade de cobaias: ")
+        leia(t)
+        escreval("Tipo de Cobaia: ")
+        leia(cobaia)
+
+        se cobaia = "C" entao
+            C <- C + t
+        senao
+            se cobaia = "R" entao
+                R <- R + t
+            senao
+                se cobaia = "S" entao
+                    S <- S + t
+                senao
+                   escreval("verifique a opção digitada!")
+                fimse
+            fimse
+        fimse
+        
+    fimpara
+
+    t <- C + R + S
+    pc <- (C/t) * 100
+    pr <- (R/t) * 100
+    ps <- (S/t) * 100
+    pc <- (C/t) * 100
+    pr <- (R/t) * 100
+    ps <- (S/t) * 100
+
+    escreval("RELATÓRIO FINAL:")
+    escreval("Total: ", t)
+    escreval("Total de Coelhos: ", C)
+    escreval("Total de Ratos: ", R)
+    escreval("Total de Sapos: ", S)
+    escreval("Percentual de Coelhos: ", pc:3:2)
+    escreval("Percentual de Ratos: ", pr:3:2)
+    escreval("Percentual de Sapos: ", ps:3:2,)
+    
+Fimalgoritmo
