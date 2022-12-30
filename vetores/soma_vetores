@@ -1,0 +1,46 @@
+Algoritmo "soma_vetor"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Faça um programa que leia N números reais e armazene-os
+// em um vetor. Em seguida:
+// - Imprimir todos os elementos do vetor
+// - Mostrar na tela a soma e a média dos elementos do vetor
+// Autor(a)    : Roberto dos Santos Monteiro
+// Data atual  : 30/12/2022
+Var
+// Seção de Declarações das variáveis 
+
+    vet : vetor [0..9] de real
+    soma, media : real
+    i, n : inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+    escreva("Quantos números você vai digitar? ")
+    leia(n)
+    soma <- 0
+    
+    para i de 1 ate n faca
+        escreva("Digite um número: ")
+        leia(vet[i])
+    fimpara
+    
+    para i de 1 ate n faca
+        soma <- soma + vet[i]
+    fimpara
+    
+    media <- soma/n
+    
+    escreval(" ")
+    
+    escreva("VALORES = ")
+    para i de 1 ate n faca
+        escreva(vet[i]:3:1, " ")
+    fimpara
+    
+    escreval(" ")
+    escreval("SOMA = ", soma:3:1)
+    escreval("MÉDIA = ", media:3:1)
+
+Fimalgoritmo
