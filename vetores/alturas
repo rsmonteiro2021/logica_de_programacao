@@ -1,0 +1,59 @@
+Algoritmo "alturas"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Fazer um programa para ler nome, idade e altura de N
+// pessoas (exemplo na lista de exercício). Depois, mostrar na tela a
+// altura média das pessoas, e mostrar também a porcentagem de pessoas
+// com menos de 16 anos, bem como os nomes dessas pessoas caso houver.
+// Autor(a)    : Roberto dos Santos Monteiro
+// Data atual  : 30/12/2022
+Var
+// Seção de Declarações das variáveis 
+
+    veta : vetor [0..19] de caracter
+    vetb : vetor [0..19] de inteiro
+    vetc : vetor [0..19] de real
+    x, soma, altura_media, porcentagem : real
+    i, n : inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+    escreva("Quantas pessoas serão analisadas? ")
+    leia(n)
+    soma <- 0
+    x <- 0
+    
+    para i de 1 ate n faca
+        escreval("Dados da ", i, "a Pessoa:")
+        escreva("Nome: ")
+        leia(veta[i])
+        escreva("Idade: ")
+        leia(vetb[i])
+        escreva("Altura: ")
+        leia(vetc[i])
+        
+        soma <- soma + vetc[i]
+        
+        se vetb[i] < 16 entao
+            x <- x + 1
+            porcentagem <- 100 * (x/n)
+        fimse
+        
+    fimpara
+    
+    altura_media <- soma/n
+    
+    escreval(" ")
+    escreva("Altura Média: ", altura_media:3:2)
+    escreval(" ")
+    escreva("Pessoas com menos de 16 anos: ", porcentagem:3:1, "%")
+    escreval(" ")
+    
+    para i de 1 ate n faca
+        se vetb[i] < 16 entao
+            escreval(veta[i])
+        fimse
+    fimpara
+    
+Fimalgoritmo
