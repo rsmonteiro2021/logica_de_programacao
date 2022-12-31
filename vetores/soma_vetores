@@ -21,12 +21,12 @@ Inicio
     leia(n)
     soma <- 0
     
-    para i de 1 ate n faca
+    para i de 0 ate n-1 faca
         escreva("Digite um número: ")
         leia(vet[i])
     fimpara
     
-    para i de 1 ate n faca
+    para i de 0 ate n-1 faca
         soma <- soma + vet[i]
     fimpara
     
@@ -35,7 +35,7 @@ Inicio
     escreval(" ")
     
     escreva("VALORES = ")
-    para i de 1 ate n faca
+    para i de 0 ate n-1 faca
         escreva(vet[i]:3:1, " ")
     fimpara
     
