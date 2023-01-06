@@ -1,0 +1,42 @@
+Algoritmo "abaixo_da_media"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Fazer um programa para ler um número inteiro N e depois
+// um vetor de N números reais. Em seguida, mostrar na tela a média
+// aritmética de todos elementos com três casas decimais. Depois mostrar
+// todos os elementos do vetor que estejam abaixo da média, com uma
+// casa decimal cada.
+// Autor(a)    : Roberto dos Santos Monteiro
+// Data atual  : 06/01/2023
+Var
+// Seção de Declarações das variáveis 
+
+    n, i : inteiro
+    vet : vetor [0..99] de real
+    soma, media : real
+    
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+    escreva("Quantos elementos vai ter o vetor? ")
+    leia(n)
+    soma <- 0
+    
+    escreval
+    para i de 0 ate n-1 faca
+        escreva("Digite um número: ")
+        leia(vet[i])
+        soma <- soma + vet[i]
+    fimpara
+    
+    media <- soma/n
+    
+    escreval
+    escreval("Média: ", media)
+    escreval("Elementos abaixo da média:")
+    para i de 0 ate n-1 faca
+        se vet[i] < media entao
+            escreval(vet[i]:3:1)
+        fimse
+    fimpara
