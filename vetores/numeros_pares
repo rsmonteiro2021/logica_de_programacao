@@ -1,0 +1,34 @@
+Algoritmo "numeros_pares"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Faça um programa que leia N números inteiros e armazene-os
+// em um vetor. Em seguida, mostre na tela todos os números pares, e também
+// a quantidade de números pares.
+// Autor(a)    : Roberto dos Santos Monteiro
+// Data atual  : 06/01/2023
+Var
+// Seção de Declarações das variáveis 
+
+    n, i : inteiro
+    vet : vetor [0..19] de inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+    escreva("Quantos números você vai digitar? ")
+    leia(n)
+    
+    para i de 0 ate n - 1 faca
+        escreva("Digite um número: ")
+        leia(vet[i])
+    fimpara
+    
+    escreval("NUMEROS PARES")
+    
+    para i de 0 ate n - 1 faca
+        se vet[i] % 2 = 0 entao
+            escreva(vet[i], " ")
+        fimse
+    fimpara
+    
+Fimalgoritmo
