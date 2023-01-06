@@ -1,0 +1,42 @@
+Algoritmo "maior_posicao"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Faça um programa que leia N números reais e armazene-os
+// em um vetor. Em seguida, mostrar na tela o maior número do vetor
+// (supor não haver empates). Mostrar também a posição do maior elemento,
+// considerando a primeira posição como 0 (zero).
+// Autor(a)    : Roberto dos Santos Monteiro
+// Data atual  : 06/01/2023
+Var
+// Seção de Declarações das variáveis 
+
+    i, n, posicao : inteiro
+    vet : vetor [0..99] de real
+    maior : real
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+    escreva("Quantos números você irá digitar? ")
+    leia(n)
+    
+    para i de 0 até n - 1 faca
+        escreva("Digite um número: ")
+        leia(vet[i])
+    fimpara
+    
+    posicao <- 0
+    maior <- vet[0]
+    
+    para i de 0 até n-1 faca
+        se vet[i] > maior entao
+            maior <- vet[i]
+            posicao <- i
+        fimse
+    fimpara
+    
+    escreval
+    escreval("MAIOR VALOR = ", maior:3:1)
+    escreva("POSIÇÃO = ", posicao)
+
+Fimalgoritmo
