@@ -1,0 +1,46 @@
+Algoritmo "media_pares"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Fazer um programa para ler um vetor de N números inteiros. Em seguida, mostrar na tela a média aritmética somente dos números
+// pares lidos, com uma casa decimal. Se nenhum número par for digitado, mostrar a mensagem "NENHUM NUMERO PAR"
+// Autor(a)    : Roberto dos Santos Monteiro
+// Data atual  : 06/01/2023
+Var
+// Seção de Declarações das variáveis 
+
+
+    n, i, soma, pares : inteiro
+    media : real
+    vet : vetor [0..99] de inteiro
+    
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+
+    escreva("Quantos elementos vai ter o vetor? ")
+    leia(n)
+    soma <- 0
+    pares <- 0
+    
+    para i de 0 ate n-1 faca
+        escreva("Digite um número: ")
+        leia(vet[i])
+    fimpara
+    
+    para i de 0 ate n-1 faca
+        se vet[i] % 2 = 0 entao
+            soma <- vet[i] + soma
+            pares <- pares + 1
+        fimse
+    fimpara
+    
+    se soma = 0 entao
+        escreval("NENHUM NÚMERO PAR!")
+    senao
+        media <- soma/pares
+        escreval
+        escreva("MÉDIA DOS NÚMEROS PARES: ", media:3:1)
+    fimse
+
+Fimalgoritmo
