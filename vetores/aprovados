@@ -1,0 +1,44 @@
+Algoritmo "aprovados"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Fazer um programa para ler um conjunto de N nomes de alunos, bem como as notas que eles tiraram no 1º e 2º semestres.
+// Cada uma dessas informações deve ser armazenada em um vetor. Depois, imprimir os nomes dos alunos aprovados, considerando aprovados
+// aqueles cuja média das notas seja maior ou igual a 6.0 (seis).
+// Autor(a)    : Roberto dos Santos Monteiro
+// Data atual  : 06/01/2023
+
+Var
+// Seção de Declarações das variáveis 
+
+    n, i : inteiro
+    aluno : vetor [0..99] de caracter
+    nota1, nota2, media : vetor [0..99] de real
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+    escreva("Número de alunos matriculados: ")
+    leia(n)
+    
+    para i de 0 ate n-1 faca
+        escreva("Nome do ", i+1, "o aluno: ")
+        leia(aluno[i])
+        escreva("Nota da 1a Avaliação: ")
+        leia(nota1[i])
+        escreva("Nota da 2a Avaliação: ")
+        leia(nota2[i])
+        escreval
+        media[i] <- (nota1[i] + nota2[i])/2
+    fimpara
+    
+    escreval
+    escreval("Alunos Aprovados:")
+    escreval
+    
+    para i de 0 ate n-1 faca
+        se media[i] >= 6 entao
+            escreval("Nome: ", aluno[i], "; Média: ", media[i]:3:2)
+        fimse
+    fimpara
+
+Fimalgoritmo
