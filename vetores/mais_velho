@@ -1,0 +1,42 @@
+
+Algoritmo "mais_velho"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Fazer um programa para ler um conjunto de nomes de pessoas e suas respectivas idades. Os nomes devem ser armazenados
+// em um vetor, e as idades em um outro vetor. Depois, mostrar na tela o nome da pessoa mais velha.
+// Autor(a)    : Roerto dos Santos Monteiro
+// Data atual  : 06/01/2023
+Var
+// Seção de Declarações das variáveis 
+
+    vet_nome : vetor [0..99] de caracter
+    vet_idade : vetor [0..99] de inteiro
+    i, n, mais_velho, posicao : inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+    escreva("Digite o número de pessoas: ")
+    leia(n)
+    
+    para i de 0 ate n-1 faca
+        escreval("Dados da ", i+1, "a pessoa:")
+        escreva("Nome: ")
+        leia(vet_nome[i])
+        escreva("Idade: ")
+        leia(vet_idade[i])
+    fimpara
+    
+    posicao <- 0
+    mais_velho <- vet_idade[0]
+    
+    para i de 0 ate n-1 faca
+        se vet_idade[i] > mais_velho entao
+            mais_velho <- vet_idade[i]
+            posicao <- i
+        fimse
+    fimpara
+    
+    escreva("Pessoa mais velha: ", vet_nome[posicao])
+    
+Fimalgoritmo
