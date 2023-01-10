@@ -1,0 +1,72 @@
+Algoritmo "dados_pessoas"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Tem-se um conjunto de dados contendo a altura e o gênero
+// M, F) de N pessoas. Fazer um programa
+// que calcule e escreva a maior e a menor altura do grupo, a média de
+// altura das mulheres, e o número de homens.
+// Autor(a)    : Roberto do Santos Monteiro
+// Data atual  : 10/01/2023
+Var
+// Seção de Declarações das variáveis 
+
+    genero : vetor [0..5] de caractere
+    n, i, homens, mulheres : inteiro
+    altura: vetor [0..5] de real
+    maior, menor, media, soma_altura : real
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+    escreva("De quantas pessoas você irá declarar os dados? ")
+    leia(n)
+    homens <- 0
+    mulheres <- 0
+    soma_altura <- 0
+
+    escreval("GÊNERO E ALTURA DAS PESSOAS:")
+    para i de 0 ate n-1 faca
+        escreval(i+1, "a pessoa:")
+        escreval("Gênero masculino (M), Feminino (F):")
+        leia(genero[i])
+        escreval("Altura (em metros):")
+        leia(altura[i])
+        escreval
+
+        se genero[i] = "M" entao
+            homens <- homens + 1
+        senao
+            mulheres <- mulheres + 1
+        fimse
+    fimpara
+    
+    para i de 0 ate n-1 faca
+        se genero[i] = "F" entao
+            soma_altura <- soma_altura + altura[i]
+        fimse
+    fimpara
+        
+    maior <- altura[0]
+    para i de 0 ate n-1 faca
+        se altura[i] > maior entao
+            maior <- altura[i]
+        fimse
+    fimpara
+
+    menor <- altura[0]
+
+    para i de 0 ate n-1 faca
+        se altura[i] < menor entao
+            menor <- altura[i]
+        fimse
+    fimpara
+    
+    media <- soma_altura/mulheres
+    
+    escreval
+    escreval("Menor Altura: ", menor)
+    escreval("Maior Altura: ", maior)
+    escreval("Média das alturas das mulheres: ", media:3:2)
+    escreval("Número de homens: ", homens)
+    
+Fimalgoritmo
