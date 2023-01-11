@@ -1,0 +1,71 @@
+Algoritmo "comerciante"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Um comerciante deseja fazer o levantamento do lucro das mercadorias que ele comercializa. 
+// Para isto, mandou digitar um conjunto de N mercadorias, cada uma contendo nome, preço de compra e preço de 
+// venda das mesmas. Fazer um programa que leia tais dados e determine e escreva quantas mercadorias 
+// proporcionaram: 
+// lucro < 10% 
+// 10% ≤ lucro ≤ 20% 
+// lucro > 20% 
+// Determine e escreva também o valor total de compra e de venda de todas as mercadorias, assim como 
+// o lucro total. 
+// Autor(a)    : Roberto dos Santos Monteiro
+// Data atual  : 10/01/2023
+
+Var
+// Seção de Declarações das variáveis 
+
+    mercadoria : vetor [0..99] de caracter
+    p_compra, p_venda : vetor [0..99] de real
+    lucro, lucro_total, total_compra, total_venda : real
+    n, i, baixo, medio, alto : inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+    escreva("Quantas mercadorias deseja cadastrar? ")
+    leia(n)
+    
+    baixo <- 0  // lucro inferior a 10%
+    medio <- 0  // lucro de 10% a 20%
+    alto <- 0   // lucro superior a 20%
+    total_compra <- 0
+    total_venda <- 0
+    
+    para i de 0 ate n-1 faca
+        escreval("Produto ", i+1, ": ")
+        escreva("Mercadoria: ")
+        leia(mercadoria[i])
+        escreva("Preço de Compra: ")
+        leia(p_compra[i])
+        total_compra <- total_compra + p_compra[i]
+        escreva("Preço de Venda: ")
+        leia(p_venda[i])
+        total_venda <- total_venda + p_venda[i]
+
+        lucro <- (p_venda[i] - p_compra[i])/p_compra[i]
+
+        se lucro < 10/100 entao
+            baixo <- baixo + 1
+        senao
+            se (lucro >= 10/100) e (lucro <= 20/100) entao
+                medio <- medio + 1
+            senao
+                alto <- alto + 1
+            fimse
+        fimse
+    fimpara
+    
+    lucro_total <- total_venda - total_compra
+    
+    escreval
+    escreval("RELATÓRIO:")
+    escreval("Lucro abaixo de 10%: ", baixo)
+    escreval("Lucro entre 10% e 20%: ", medio)
+    escreval("Lucro acima de 20%: ", alto)
+    escreval("Valor Total de Compra: ", total_compra:3:2)
+    escreval("Valor Total de Venda: ", total_venda:3:2)
+    escreval("Lucro Total: ", lucro_total:3:2)
+
+Fimalgoritmo
