@@ -1,0 +1,70 @@
+Algoritmo "soma_matrizes"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Fazer um programa para ler duas matrizes de números
+// inteiros A e B, contendo de M linhas e N colunas cada
+// (M e N máximo = 10). Depois, gerar uma terceira matriz C onde cada
+// elemento desta é a soma dos elementos correspondentes das matrizes
+// originais. Imprimir na tela a matriz gerada.
+// Autor(a)    : Roberto dos Santos Monteiro
+// Data atual  : 22/02/2023
+Var
+// Seção de Declarações das variáveis 
+
+    i, j, m, n : inteiro
+    mat_a, mat_b, mat_c : vetor[0..9, 0..9] de inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+    escreva("Quantas linhas vai ter cada matriz? ")
+    leia(m)
+    escreva("Quantas colunas vai ter cada matriz? ")
+    leia(n)
+    
+    escreval
+    escreval("Digite os elementos da matriz A")
+    para i de 0 ate m-1 faca
+        para j de 0 ate n-1 faca
+            escreva("Elemento [", i, ",", j, "]: ")
+            leia(mat_a[i, j])
+        fimpara
+    fimpara
+    
+    escreval("Matriz A")
+    para i de 0 ate m-1 faca
+        para j de 0 ate n-1 faca
+            escreva(mat_a[i, j])
+        fimpara
+        escreval
+    fimpara
+    
+    escreval
+    escreval("Digite os elementos da matriz B")
+    para i de 0 ate m-1 faca
+        para j de 0 ate n-1 faca
+            escreva("Elemento [", i, ",", j, "]: ")
+            leia(mat_b[i, j])
+        fimpara
+    fimpara
+    
+    escreval("Matriz B")
+    para i de 0 ate m-1 faca
+        para j de 0 ate n-1 faca
+            escreva(mat_b[i, j])
+        fimpara
+        escreval
+    fimpara
+    
+    escreval
+    escreval("Matriz C - soma das matrizes")
+    para i de 0 ate m-1 faca
+        para j de 0 ate n-1 faca
+            mat_c[i, j] <- mat_a[i, j] + mat_b[i, j]
+            escreva(mat_c[i, j])
+        fimpara
+        escreval
+    fimpara
+
+
+Fimalgoritmo
