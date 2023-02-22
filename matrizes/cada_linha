@@ -1,0 +1,42 @@
+Algoritmo "cada_linha"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Ler um inteiro N e uma matriz quadrada de ordem N (máximo = 10). Mostrar qual o maior elemento
+// de cada linha. Suponha não haver empates.
+// Autor(a)    : Roberto dos Santos Monteiro
+// Data atual  : 22/02/2023
+
+Var
+// Seção de Declarações das variáveis 
+
+    i, j, m, n, maior : inteiro
+    mat : vetor[0..9, 0..9] de inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+    escreva("Qual a ordem da matriz? ")
+    leia(m)
+    n <- m
+    
+    para i de 0 ate m-1 faca
+        para j de 0 ate n-1 faca
+            escreva("Elemento [", i, ", ", j, "]: ")
+            leia(mat[i, j])
+        fimpara
+    fimpara
+    
+  escreval
+  escreval("Maior Elemento de Cada Linha")
+    
+    para i de 0 ate m-1 faca
+         maior <- mat[i, 0]
+        para j de 0 ate n-1 faca
+            se mat[i, j] > maior entao
+                maior <- mat[i, j]
+            fimse
+        fimpara
+        escreval(maior)
+    fimpara
+
+Fimalgoritmo
