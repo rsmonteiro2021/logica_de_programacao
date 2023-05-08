@@ -1,0 +1,102 @@
+Algoritmo "Matriz_Geral"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Ler uma matriz quadrada de ordem N (máximo = 10), contendo
+// números reais. Em seguida, fazer as seguintes ações:
+// a) calcular e imprimir a soma de todos os elementos positivos da matriz.
+// b) fazer a leitura do índice de uma linha da matriz e, daí, imprimir todos os elementos desta linha.
+// c) fazer a leitura do índice de uma coluna da matriz e, daí, imprimir todos os elementos desta coluna.
+// d) imprimir os elementos da diagonal principal da matriz.
+// e) alterar a matriz elevando ao quadrado todos os números negativos da mesma. Em seguida imprimir
+// a matriz alterada.
+// Autor(a)    : Roberto dos Santos Monteiro
+// Data atual  : 07/05/2023
+Var
+// Seção de Declarações das variáveis 
+
+    N, i, j, l, c : inteiro
+    soma : real
+    matriz : vetor[0.. 9, 0..9] de real
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+    escreval("Qual a ordem da matriz? ")
+    leia(N)
+    soma <- 0
+    
+    para i de 0 ate N-1 faca
+        para j de 0 ate N-1 faca
+            escreval("Elemento ", "[", i, ",", j, "]: ")
+            leia(matriz[i, j])
+        fimpara
+    fimpara
+    
+    escreval
+    escreval("Verificando a Matriz")
+    para i de 0 ate N-1 faca
+        para j de 0 ate N-1 faca
+            escreva(matriz[i, j]:3:1, " ")
+        fimpara
+        escreval
+    fimpara
+    
+    escreval
+    para i de 0 ate N-1 faca
+        para j de 0 ate N-1 faca
+            se matriz[i, j] > 0 entao
+                soma <- soma + matriz[i, j]
+            fimse
+        fimpara
+    fimpara
+    
+    escreval
+    escreva("Soma dos elementos positivos da matriz: ", soma:3:1)
+    escreval
+    
+    escreva("Escolha uma Linha: ")
+    leia(l)
+    escreval
+    
+    escreval("Linha Escolhida:")
+    para j de 0 ate N-1 faca
+       escreva(matriz[l,j]:3:1, " ")
+    fimpara
+    escreval
+    
+    escreva("Escolha uma coluna: ")
+    leia(c)
+
+    escreval("Coluna Escolhida:")
+    para i de 0 ate N-1 faca
+        escreval(matriz[i, c]:3:1, " ")
+    fimpara
+    escreval
+    
+    escreval("Diagonal Principal da Matriz:")
+    para i de 0 ate N-1 faca
+        para j de 0 ate N-1 faca
+            se i = j entao
+                escreval(matriz[i, j]:3:1, " ")
+            fimse
+        fimpara
+    fimpara
+    escreval
+    
+    escreval("Matriz Alterada:")
+    para i de 0 ate N-1 faca
+        para j de 0 ate N-1 faca
+            se matriz[i, j] < 0 entao
+                matriz[i, j] <- exp(matriz[i, j], 2)
+            fimse
+        fimpara
+    fimpara
+    
+    para i de 0 ate N-1 faca
+        para j de 0 ate N-1 faca
+            escreva(matriz[i, j]:3:1, " ")
+        fimpara
+        escreval
+    fimpara
+
+Fimalgoritmo
