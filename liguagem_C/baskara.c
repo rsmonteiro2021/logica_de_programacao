@@ -4,7 +4,7 @@ de Baskara, calcular e mostrar os valores das raízes x1 e x2 da equação com q
 conforme exemplo. Se a equação não possuir raízes reais, mostrar uma mensagem.
 */
 
-#include <stdio.h>]
+#include <stdio.h>
 #include <string.h>
 #include <math.h>
 
