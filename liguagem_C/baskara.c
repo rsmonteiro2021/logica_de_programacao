@@ -31,7 +31,7 @@ int main () {
 
     bascara = pow(b, 2) - (4 * a * c);
 
-    if (bascara >= 0) {
+    if (bascara >= 0 && a != 0) {
         x1 = (-b + sqrt(bascara))/(2*a);
         x2 = (-b - sqrt(bascara))/(2*a);
         printf("x1 = %.2lf\n", x1);
