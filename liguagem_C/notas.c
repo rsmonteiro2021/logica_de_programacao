@@ -41,4 +41,6 @@ int main () {
     else {
         printf("O aluno %s teve media %.2f, portanto foi APROVADO\n", nome, media);
     }
+
+    return 0;
 }
