@@ -42,4 +42,6 @@ int main () {
         printf("A equacao nao possui raizes reais\n");
     }
 
+    return 0;
+
 }
