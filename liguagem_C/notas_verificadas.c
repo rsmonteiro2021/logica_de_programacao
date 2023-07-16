@@ -5,6 +5,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
+#include <stdlib.h>
+#include <locale.h>
 
 void ler_texto(char *buffer, int length) {
     fgets(buffer, length, stdin);
@@ -20,6 +22,8 @@ int main() {
     int x, N, i, a;
     double nota, total, media, condicao;
     char nome[50];
+
+    setlocale(LC_ALL, "Portuguese");
     
     printf("Qantos alunos foram avaliados?\n");
     scanf("%d", &x);
@@ -27,18 +31,17 @@ int main() {
     scanf("%d", &N);
     printf("Digite a menor media para aprovacao:\n");
     scanf("%lf", &condicao);
-    a = 1;
     total = 0;
     
-    while(a <= x) {
+    for(a = 1; a <= x; a++) {
         
-        printf("Digite o nome do aluno:\n");
+        printf("Digite o nome do %dº aluno:\n", a);
         limpar_texto();
         ler_texto(nome, 50);
         i = 1;
         
         while(i <= N) {
-            printf("Digite a nota do aluno:\n");
+            printf("Digite a %iª nota do aluno:\n");
             scanf("%lf", &nota);
             total = total + nota;
             i++;
@@ -53,7 +56,6 @@ int main() {
             printf("O aluno %s teve media = %.2lf, portanto foi Reproavado.\n", nome, media);
         }
         
-        a++;
         total = 0;
     }
 
