@@ -40,7 +40,7 @@ int main() {
     printf("IDADE: ");
     scanf("%d", &age2);
     
-    media = (age1 + age2)/2;
+    media = (age1 + age2)/2.0;
     
     printf("A média entre as idades de %s e de %s é %.1f.", name1, name2, media);
 
