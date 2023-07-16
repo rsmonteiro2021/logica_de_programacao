@@ -18,13 +18,15 @@ void limpar_texto() {
 
 int main() {
     int x, N, i, a;
-    double nota, total, media;
+    double nota, total, media, condicao;
     char nome[50];
     
     printf("Qantos alunos foram avaliados?\n");
     scanf("%d", &x);
     printf("Quantas notas serão digitadas?\n");
     scanf("%d", &N);
+    printf("Digite a menor media para aprovacao:\n");
+    scanf("%lf", &condicao);
     a = 1;
     total = 0;
     
@@ -44,7 +46,7 @@ int main() {
         
         media = total/N;
         
-        if (media >= 7.0) {
+        if (media >= condicao) {
             printf("O aluno %s teve media = %.2lf, portanto foi Aproavado.\n", nome, media);
         }
         else {
