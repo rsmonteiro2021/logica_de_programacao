@@ -16,7 +16,7 @@ void ler_texto(char *buffer, int length) {
 
 void limpar_entrada() {
     char c;
-    while((c = getchar()) != "\n" && c != EOF) {}
+    while((c = getchar()) != '\n' && c != EOF) {}
 }
 
 int main() {

@@ -15,7 +15,7 @@ void write_text (char *buffer, int length) {
 
 void clear_int() {
     char c;
-    while ((c =  getchar ()) != "\n" && c != EOF) {}
+    while ((c =  getchar ()) != '\n' && c != EOF) {}
 }
 
 int main () {
