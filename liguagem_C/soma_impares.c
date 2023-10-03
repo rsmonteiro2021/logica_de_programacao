@@ -1,7 +1,7 @@
 /******************************************************************************
 
 O programa permite somar os números ímpares compreendidos dentro de um intervalo
-fechado.
+aberto.
 
 *******************************************************************************/
 #include <stdio.h>
