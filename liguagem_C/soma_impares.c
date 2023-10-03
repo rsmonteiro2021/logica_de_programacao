@@ -28,28 +28,38 @@ int main(){
     scanf("%d", &y);
     
     if (x < y){
-        while (x <= y){
+        while (x < y){
             if (x % 2 == 0){
                 x++;
-                soma = soma + x;
+                if(x < y){
+                    soma = soma + x;
+                }
                 x++;
             }
             else{
-                soma = soma + x;
+                x = x + 2;
+                if (x < y){
+                    soma = soma + x;
+                }
                 x++;
             }
         }
         printf("SOMA = %d", soma);
     }
     else{
-        while (y <= x){
+        while (y < x){
             if (y % 2 == 0){
                 y++;
-                soma = soma + y;
+                if (y < x){
+                    soma = soma + y;
+                }
                 y++;
             }
             else{
-                soma = soma + y;
+                y = y + 2;
+                if (y < x){
+                    soma = soma + y;
+                }
                 y++;
             }
         }
