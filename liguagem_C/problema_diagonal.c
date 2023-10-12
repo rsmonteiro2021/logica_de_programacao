@@ -50,7 +50,7 @@ int main()
             }
         }
     }
-
+    
     negativos = 0;
     printf("\nQuantidade de Elementos Negativos\n");
     for (int i = 0; i < n; i++){
