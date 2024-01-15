@@ -26,14 +26,19 @@ int main() {
     printf("Digite quantos minutos foi utilizado:\n");
     scanf("%lf", &tempo_uso);
 
-    if (tempo_uso <= 100) {
+    while (tempo_uso < 0){
+        printf("ERROR! Verifique o valor digitado!\nDigite um valor maior ou igual a 0\n");
+        printf("\nDigite a quantidade de minutos: \n");
+        scanf("%lf", &tempo_uso);
+    }
+    if ((tempo_uso <= 100) && (tempo_uso > 0)) {
         valor_total = plano_basico;
         printf("Foram utilizados um total de %.1lf minutos.\n", tempo_uso);
         printf("Valor da fatura: R$%.2lf.\n", valor_total);
     }
     else {
         valor_total = plano_basico + ((tempo_uso - 100) * 2.00);
-        printf("Foram utilizados um total de %lf minutos.\n", tempo_uso);
+        printf("Foram utilizados um total de %.2lf minutos.\n", tempo_uso);
         printf("Valor da fatura: R$%.2lf.\n", valor_total);
     }
     
